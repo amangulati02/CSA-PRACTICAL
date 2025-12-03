@@ -1,0 +1,11 @@
+START: READ
+        JMPZ DONE  ; IF N<0 THEN JUMP TO DONE
+        ADD SUM
+        STA SUM       ;STORE SUM
+        JUMP START
+
+DONE: LDA SUM      ; LOAD FINAL SUM
+        WRITE
+        HLT
+
+SUM: .data 2 0
